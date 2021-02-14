@@ -15,6 +15,7 @@ app.use(logger("dev"))
 app.use(express.urlencoded({extended: true}));
 //Static files are files that clients download as they are from the server. Create a new directory, public. Express, by default does not allow you to serve static files. You need to enable it using the following built-in middleware.
 app.use(express.static("public"));
+app.use(express.json());
 
 app.use(require("./routes/htmlRoutes"));
 
