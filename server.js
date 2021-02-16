@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(require("./routes/htmlRoutes"));
 
 
-mongoose.connect(
+Mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/desolate-peak-77269',
     {
       useNewUrlParser: true,
