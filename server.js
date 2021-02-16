@@ -20,10 +20,20 @@ app.use(express.json());
 app.use(require("./routes/htmlRoutes"));
 
 
-Mongoose.connect("mongodb://localhost/workout", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-});
+Mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/desolate-peak-77269',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
+
+// Mongoose.connect("mongodb://localhost/workout", {
+//     useNewUrlParser: true,
+//     useFindAndModify: false
+// });
 
 app.use(require("./routes/htmlRoutes"))
 app.use(require("./routes/apiRoutes"))
