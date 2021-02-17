@@ -18,6 +18,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.use(require("./routes/htmlRoutes"));
+app.use(require("./routes/apiRoutes"))
 
 
 Mongoose.connect(
@@ -35,8 +36,6 @@ Mongoose.connect(
 //     useFindAndModify: false
 // });
 
-app.use(require("./routes/htmlRoutes"))
-app.use(require("./routes/apiRoutes"))
 
 //Listen for connections
 app.listen(PORT, ()=>{
