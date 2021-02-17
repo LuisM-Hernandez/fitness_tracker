@@ -22,7 +22,7 @@ app.use(require("./routes/apiRoutes"))
 
 
 Mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/Workout-Tracker',
+    process.env.MONGODB_URI || 'mongodb://localhost/workout-tracker',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
