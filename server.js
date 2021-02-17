@@ -4,8 +4,8 @@ const Mongoose = require("mongoose");
 const logger = require("morgan");
 
 //Connection to port
-const PORT = 3002;
-
+// const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 //App it creates a new instance of express?
 const app = express();
 
