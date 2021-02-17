@@ -21,7 +21,7 @@ app.use(require("./routes/htmlRoutes"));
 
 
 Mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/desolate-peak-77269',
+    process.env.MONGODB_URI || 'mongodb://localhost/workout-tracker',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
